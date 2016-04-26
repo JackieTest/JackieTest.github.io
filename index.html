@@ -1,0 +1,25 @@
+<html>
+<h1>Contributing to the Code Base</h1>
+<p>Anyone (not just committers) can share contributions to WSO2's open-source software products. Your work will be recognized: if your contribution – feature enhancement, bug fix, or other improvements – is accepted, your name will be included as an author in the official commit logs. Read on for details on how you can contribute.</p>
+<h2>Overview of the WSO2 repositories</h2>
+<p>WSO2 uses Git as its source control management system. The WSO2 source code is organized into separate repositories in GitHub, and each WSO2 product is built using several of these repositories. Therefore, if you are interested in editing the source code, you need to first identify the Git repositories that you require. For the complete list of repositories used by WSO2 products, see WSO2 Git Repositories. If you are still not sure which repositories you need, send an email to dev@wso2.org.</p>
+
+<p>There are two types of WSO2 repositories:</p>
+<ol>
+<li>Component-level repositories: A component repository consists of the source code relevant to a particular component. Each WSO2 product release is built using combinations of these component repositories. Therefore, if you want to do modifications to a particular function in a product, you need to clone the Git repositories relevant to that function. If you want to know more about component repositories and the tags used for a product release, send an email to dev@wso2.org.</li>
+<li>Product-level repository: A product repository consists of the build scripts and profiles that are used for building the product. It also includes the integration test cases. For example, given below is the product repository for the WSO2 Identity Server 5.1.0 release. When you build this product repository, all the component repositories that are required for the IS 5.1.0 release will be automatically fetched from Nexus. Therefore, you can simply clone this repository tag to your computer and build it to get a standard product pack.</li> 
+Git Repository Name
+Repository URL
+Tag for IS 5.1.0 Release
+product-is
+https://github.com/wso2/product-is.git
+v5.1.0
+</ol>
+<h2>WSO2 GitHub guidelines</h2>
+<h3>Fork the correct WSO2 Git repository</h3>
+<p>When contributing to WSO2 code base by way of a patch, make sure you identify the correct Git repository that needs to be forked. For more information on WSO2 Git repositories, see WSO2 GitHub Repositories. If you still are not sure which repository to fork, send an email to dev@wso2.org so that a WSO2 team member can advise you.</p>
+<h3>Do not build any dependencies</h3>
+<p>You do not need to build any dependencies, as everything you need will be automatically fetched from the Maven repository (Nexus) when you are building the product on your machine. Make sure the build server has an active Internet connection to download dependencies while building.</p>
+<h3>Sync the fork with the upstream repository before issuing a pull request</h3>
+<p>If you are working with a branch instead of a tag, there is a high possibility that the forked repository may differ from the upstream repository (the remote repository that you forked) because it will likely have changed since you forked it. Therefore, always sync the forked repository with the upstream repository before issuing a pull request to prevent the request from being rejected. (Tags are static by definition, so the files in a tag should not have changed, making this step unnecessary when working with a tag instead of a branch.)</p> 
+</html>
